@@ -11,9 +11,8 @@ app.get('/', (_, res) => {
     res.send(foo())
 })
 
-const port = '3005'
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`)
-})
-app.use("/sqlconn",mysqltest)
+app.get("/a2p", (req, res) => {
+    //const {username,password} = req.body
+    res.send(JSON.stringify("abc"))
+    console.log(req.body)
+  });
